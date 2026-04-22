@@ -26,7 +26,7 @@ We combine sentiment data with trade-level data to:
 ### 1. Clone the repository
 
 ```bash
-git clone  ai-ml-project-on-delhi-aqi/project1.ipynb at main · sniderco/ai-ml-project-on-delhi-aqi  
+git clone  (https://github.com/sniderco/trader_analysis/blob/main/project1.ipynb)  
 cd behavioral-alpha
 ```
 
