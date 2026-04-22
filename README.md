@@ -108,13 +108,42 @@ python main.py
 
 ---
 
-## 📊 Key Insights (Example)
+## 📝 Methodology
 
-* Trading intensity often increases during **Greed**, but profitability does not scale proportionally → possible overconfidence
-* **Fear regimes** show higher variability → more noise and risk
-* Behavioral features (activity, size, win rate) often explain outcomes better than sentiment alone
+- Merged sentiment data (Fear & Greed Index) with trade-level data on a daily basis  
+- Engineered behavioral features:
+  - Daily PnL, win rate  
+  - Trade activity (`trade_count`)  
+  - Position sizing (`avg_trade_size`, `median_trade_size`)  
+  - Long/Short ratio  
+- Segmented data into behavioral regimes:
+  - High vs Low leverage (proxy using trade size)  
+  - High vs Low trading frequency  
+  - Consistent vs Inconsistent performance  
+- Built simple predictive models:
+  - Classification → next-day profitability (profit/loss)  
+  - Regression → next-day PnL volatility  
 
 ---
+
+## 📊 Key Insights
+
+- **Higher trading activity during Greed does not necessarily improve profitability**, indicating potential overconfidence  
+- **Fear regimes exhibit higher variability in PnL**, suggesting increased market uncertainty and noise  
+- **Behavioral features (trade size, frequency, win rate) are more informative than sentiment alone** in explaining outcomes  
+
+---
+
+## 💡 Strategy Recommendations
+
+- **Risk Control in Greed**  
+  During high-greed regimes, reduce position size and avoid excessive trading, as increased activity does not proportionally improve returns  
+
+- **Selective Trading in Fear**  
+  Participate during fear periods only when trading activity stabilizes, avoiding panic-driven volatility  
+
+- **Focus on Behavioral Discipline**  
+  Maintain consistent trade sizing and avoid reactive overtrading, as disciplined regimes tend to show better performance stability  
 
 ## 🤖 Models
 
